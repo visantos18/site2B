@@ -1,6 +1,209 @@
-<DOCTYPE html>
-<html lang="pt-br">
+/* Paleta de Cores Moderna - Cinema, Streaming & Música */
+:root {
+    --fundo-escuro: #141414;
+    --texto-principal: #333333;
+    --branco-card: #ffffff;
+    --vermelho-destaque: #E50914;
+    --cinza-claro: #F3F3F3;
+    --azul-musica: #1DB954;
+    /* Um verde/azul estilo Spotify para dar o toque de música */
+}
 
-<head>
-<meta chaeset="UTF-8">
-<<meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* Reset básico e Configuração de Rolagem Suave */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--cinza-claro);
+    color: var(--texto-principal);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilos do Cabeçalho (Menu Superior) */
+header {
+    background-color: var(--fundo-escuro);
+    color: #ffffff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--vermelho-destaque);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--vermelho-destaque);
+    text-decoration: underline;
+}
+
+/* --- ESTILOS DA NOVA TELA INICIAL (BOAS-VINDAS) --- */
+.tela-boas-vindas {
+    background: linear-gradient(rgba(20, 20, 20, 0.85), rgba(20, 20, 20, 0.95)), url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200&auto=format&fit=crop') no-repeat center center/cover;
+    color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+    border-bottom: 4px solid var(--vermelho-destaque);
+}
+
+.boas-vindas-conteudo {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.tela-boas-vindas h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.tela-boas-vindas p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #cccccc;
+}
+
+/* Barra de Pesquisa */
+.busca-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.busca-container input {
+    width: 70%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+}
+
+.busca-container button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: var(--vermelho-destaque);
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.busca-container button:hover {
+    background-color: #b80710;
+}
+
+/* Botões de Categoria */
+.botoes-categoria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-cat {
+    display: inline-block;
+    padding: 12px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+    transition: all 0.3s ease;
+}
+
+.btn-cat:hover {
+    background-color: #ffffff;
+    color: var(--fundo-escuro);
+}
+
+
+/* Estilos dos Tópicos Gerais */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.conteudo-topico {
+    background-color: var(--branco-card);
+    padding: 30px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    scroll-margin-top: 120px;
+}
+
+.conteudo-topico h2 {
+    color: var(--fundo-escuro);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 3px solid var(--vermelho-destaque);
+    padding-bottom: 10px;
+}
+
+/* Destaca a borda de música com a cor verde/azul */
+#musica h2 {
+    border-bottom: 3px solid var(--azul-musica);
+}
+
+.conteudo-topico img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+.conteudo-topico p {
+    text-align: justify;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Estilos do Rodapé */
+footer {
+    background-color: var(--fundo-escuro);
+    color: #aaaaaa;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
